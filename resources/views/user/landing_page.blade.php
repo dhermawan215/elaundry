@@ -6,28 +6,28 @@
 
 @section('front_content')
     <section style="padding-top: 7rem;">
-        <div class="bg-holder" style="background-image:url(assets/img/hero/hero-bg.svg);">
+        <div class="bg-holder" style="background-image:url({{ asset('user/assets/img/hero/hero-bg.svg') }});">
         </div>
         <!--/.bg-holder-->
 
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-5 col-lg-6 order-0 order-md-1 text-end"><img class="pt-7 pt-md-0 hero-img"
-                        src="assets/img/hero/hero-img.png" alt="hero-header" /></div>
+                        src="{{ asset('asset/hero.png') }}" alt="hero-header" /></div>
                 <div class="col-md-7 col-lg-6 text-md-start text-center py-6">
-                    <h4 class="fw-bold text-danger mb-3">Best Destinations around the world</h4>
-                    <h1 class="hero-title">Travel, enjoy and live a new and full life</h1>
-                    <p class="mb-4 fw-medium">Built Wicket longer admire do barton vanity itself do in it.<br
-                            class="d-none d-xl-block" />Preferred to sportsmen it engrossed listening. Park gate<br
-                            class="d-none d-xl-block" />sell they west hard for the.</p>
+                    <h4 class="fw-bold text-danger mb-3">Solusi pakaian anda</h4>
+                    <h1 class="hero-title">Pakaian kotor? Malas Cuci?.</h1>
+                    <p class="mb-4 fw-medium">Nikmati hidupmu dengan sekali klik<br class="d-none d-xl-block" />Pakaian
+                        langsung bersih<br class="d-none d-xl-block" />nikmati hidup, nikmati waktumu untuk berkreatifiitas
+                    </p>
                     <div class="text-center text-md-start"> <a
                             class="btn btn-primary btn-lg me-md-4 mb-3 mb-md-0 border-0 primary-btn-shadow" href="#!"
-                            role="button">Find out more</a>
+                            role="button">Pesan Sekarang</a>
                         <div class="w-100 d-block d-md-none"></div><a href="#!" role="button" data-bs-toggle="modal"
                             data-bs-target="#popupVideo"><span
                                 class="btn btn-danger round-btn-lg rounded-circle me-3 danger-btn-shadow"> <img
-                                    src="assets/img/hero/play.svg" width="15" alt="paly" /></span></a><span
-                            class="fw-medium">Play Demo</span>
+                                    src="{{ asset('user/assets/img/hero/play.svg') }}" width="15"
+                                    alt="paly" /></span></a><span class="fw-medium">Demo</span>
                         <div class="modal fade" id="popupVideo" tabindex="-1" aria-labelledby="popupVideo"
                             aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered modal-lg">
@@ -49,50 +49,49 @@
     <section class="pt-5 pt-md-9" id="service">
 
         <div class="container">
-            <div class="position-absolute z-index--1 end-0 d-none d-lg-block"><img src="assets/img/category/shape.svg"
-                    style="max-width: 200px" alt="service" /></div>
+            <div class="position-absolute z-index--1 end-0 d-none d-lg-block"><img
+                    src="{{ asset('user/assets/img/category/shape.svg') }}" style="max-width: 200px" alt="service" /></div>
             <div class="mb-7 text-center">
-                <h5 class="text-secondary">CATEGORY </h5>
-                <h3 class="fs-xl-10 fs-lg-8 fs-7 fw-bold font-cursive text-capitalize">We Offer Best Services</h3>
+                {{-- <h5 class="text-secondary">CATEGORY </h5> --}}
+                <h3 class="fs-xl-10 fs-lg-8 fs-7 fw-bold font-cursive text-capitalize">Layanan Terbaik Kami</h3>
             </div>
             <div class="row">
                 <div class="col-lg-3 col-sm-6 mb-6">
                     <div class="card service-card shadow-hover rounded-3 text-center align-items-center">
-                        <div class="card-body p-xxl-5 p-4"> <img src="assets/img/category/icon1.png" width="75"
-                                alt="Service" />
-                            <h4 class="mb-3">Calculated Weather</h4>
-                            <p class="mb-0 fw-medium">Built Wicket longer admire do barton vanity itself do in it.
+                        <div class="card-body p-xxl-5 p-4"> <img src="{{ asset('user/assets/img/category/icon1.png') }}"
+                                width="75" alt="Service" />
+                            <h4 class="mb-3">Pesan Online</h4>
+                            <p class="mb-0 fw-medium">Pesan Via Whatsaap, atau aplikasi kami
                             </p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6 mb-6">
                     <div class="card service-card shadow-hover rounded-3 text-center align-items-center">
-                        <div class="card-body p-xxl-5 p-4"> <img src="assets/img/category/icon2.png" width="75"
-                                alt="Service" />
-                            <h4 class="mb-3">Best Flights</h4>
-                            <p class="mb-0 fw-medium">Engrossed listening. Park gate sell they west hard for the.
+                        <div class="card-body p-xxl-5 p-4"> <img src="{{ asset('user/assets/img/category/icon2.png') }}"
+                                width="75" alt="Service" />
+                            <h4 class="mb-3">Profesional</h4>
+                            <p class="mb-0 fw-medium">Pelayanan kami dilakukan oleh tenanga ahli dan senantiasa menjamin
+                                kualitas
                             </p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6 mb-6">
                     <div class="card service-card shadow-hover rounded-3 text-center align-items-center">
-                        <div class="card-body p-xxl-5 p-4"> <img src="assets/img/category/icon3.png" width="75"
-                                alt="Service" />
-                            <h4 class="mb-3">Local Events</h4>
-                            <p class="mb-0 fw-medium">Barton vanity itself do in it. Preferd to men it engrossed
-                                listening.</p>
+                        <div class="card-body p-xxl-5 p-4"> <img src="{{ asset('user/assets/img/category/icon3.png') }}"
+                                width="75" alt="Service" />
+                            <h4 class="mb-3">Terpercaya</h4>
+                            <p class="mb-0 fw-medium">Telah dipercaya dan mendapatkan berbagi macam ulasan positif</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6 mb-6">
                     <div class="card service-card shadow-hover rounded-3 text-center align-items-center">
-                        <div class="card-body p-xxl-5 p-4"> <img src="assets/img/category/icon4.png" width="75"
-                                alt="Service" />
-                            <h4 class="mb-3">Customization</h4>
-                            <p class="mb-0 fw-medium">We deliver outsourced aviation services for military
-                                customers</p>
+                        <div class="card-body p-xxl-5 p-4"> <img src="{{ asset('user/assets/img/category/icon4.png') }}"
+                                width="75" alt="Service" />
+                            <h4 class="mb-3">Cek Laundri</h4>
+                            <p class="mb-0 fw-medium">Kamu bisa cek progress laundry dimana saja, kapan saja</p>
                         </div>
                     </div>
                 </div>
@@ -104,65 +103,68 @@
     <!-- ============================================-->
     <!-- ============================================-->
     <!-- <section> begin ============================-->
-    <section class="pt-5" id="destination">
+    {{-- <section class="pt-5" id="destination">
 
         <div class="container">
             <div class="position-absolute start-100 bottom-0 translate-middle-x d-none d-xl-block ms-xl-n4"><img
-                    src="assets/img/dest/shape.svg" alt="destination" /></div>
+                    src="{{ asset('user/assets/img/dest/shape.svg') }}" alt="destination" /></div>
             <div class="mb-7 text-center">
                 <h5 class="text-secondary">Top Selling </h5>
                 <h3 class="fs-xl-10 fs-lg-8 fs-7 fw-bold font-cursive text-capitalize">Top Destinations</h3>
             </div>
             <div class="row">
                 <div class="col-md-4 mb-4">
-                    <div class="card overflow-hidden shadow"> <img class="card-img-top" src="assets/img/dest/dest1.jpg"
-                            alt="Rome, Italty" />
+                    <div class="card overflow-hidden shadow"> <img class="card-img-top"
+                            src="{{ asset('user/assets/img/dest/dest1.jpg') }}" alt="Rome, Italty" />
                         <div class="card-body py-4 px-3">
                             <div class="d-flex flex-column flex-lg-row justify-content-between mb-3">
                                 <h4 class="text-secondary fw-medium"><a
                                         class="link-900 text-decoration-none stretched-link" href="#!">Rome,
                                         Italty</a></h4><span class="fs-1 fw-medium">$5,42k</span>
                             </div>
-                            <div class="d-flex align-items-center"> <img src="assets/img/dest/navigation.svg"
-                                    style="margin-right: 14px" width="20" alt="navigation" /><span
-                                    class="fs-0 fw-medium">10 Days Trip</span></div>
+                            <div class="d-flex align-items-center"> <img
+                                    src="{{ asset('user/assets/img/dest/navigation.svg') }}" style="margin-right: 14px"
+                                    width="20" alt="navigation" /><span class="fs-0 fw-medium">10 Days Trip</span>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <div class="card overflow-hidden shadow"> <img class="card-img-top" src="assets/img/dest/dest2.jpg"
-                            alt="London, UK" />
+                    <div class="card overflow-hidden shadow"> <img class="card-img-top"
+                            src="{{ asset('user/assets/img/dest/dest2.jpg') }}" alt="London, UK" />
                         <div class="card-body py-4 px-3">
                             <div class="d-flex flex-column flex-lg-row justify-content-between mb-3">
                                 <h4 class="text-secondary fw-medium"><a
                                         class="link-900 text-decoration-none stretched-link" href="#!">London, UK</a>
                                 </h4><span class="fs-1 fw-medium">$4.2k</span>
                             </div>
-                            <div class="d-flex align-items-center"> <img src="assets/img/dest/navigation.svg"
-                                    style="margin-right: 14px" width="20" alt="navigation" /><span
-                                    class="fs-0 fw-medium">12 Days Trip</span></div>
+                            <div class="d-flex align-items-center"> <img
+                                    src="{{ asset('user/assets/img/dest/navigation.svg') }}" style="margin-right: 14px"
+                                    width="20" alt="navigation" /><span class="fs-0 fw-medium">12 Days Trip</span>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <div class="card overflow-hidden shadow"> <img class="card-img-top" src="assets/img/dest/dest3.jpg"
-                            alt="Full Europe" />
+                    <div class="card overflow-hidden shadow"> <img class="card-img-top"
+                            src="{{ asset('user/assets/img/dest/dest3.jpg') }}" alt="Full Europe" />
                         <div class="card-body py-4 px-3">
                             <div class="d-flex flex-column flex-lg-row justify-content-between mb-3">
                                 <h4 class="text-secondary fw-medium"><a
                                         class="link-900 text-decoration-none stretched-link" href="#!">Full
                                         Europe</a></h4><span class="fs-1 fw-medium">$15k</span>
                             </div>
-                            <div class="d-flex align-items-center"> <img src="assets/img/dest/navigation.svg"
-                                    style="margin-right: 14px" width="20" alt="navigation" /><span
-                                    class="fs-0 fw-medium">28 Days Trip</span></div>
+                            <div class="d-flex align-items-center"> <img
+                                    src="{{ asset('user/assets/img/dest/navigation.svg') }}" style="margin-right: 14px"
+                                    width="20" alt="navigation" /><span class="fs-0 fw-medium">28 Days Trip</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div><!-- end of .container-->
 
-    </section>
+    </section> --}}
     <!-- <section> close ============================-->
     <!-- ============================================-->
     <!-- ============================================-->
@@ -173,58 +175,68 @@
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <div class="mb-4 text-start">
-                        <h5 class="text-secondary">Easy and Fast </h5>
-                        <h3 class="fs-xl-10 fs-lg-8 fs-7 fw-bold font-cursive text-capitalize">Book your next trip
-                            in 3 easy steps</h3>
+                        <h5 class="text-secondary">Langkah mudah cuci pakaian anda </h5>
+                        <h3 class="fs-xl-10 fs-lg-8 fs-7 fw-bold font-cursive text-capitalize">Hubungi kami, cucian selesai
+                        </h3>
                     </div>
                     <div class="d-flex align-items-start mb-5">
-                        <div class="bg-primary me-sm-4 me-3 p-3" style="border-radius: 13px"> <img
-                                src="assets/img/steps/selection.svg" width="22" alt="steps" /></div>
+                        <div class="bg-primary me-sm-4 me-3 p-3" style="border-radius: 13px"> <i
+                                class="bi bi-star text-white"></i>
+                        </div>
                         <div class="flex-1">
-                            <h5 class="text-secondary fw-bold fs-0">Choose Destination</h5>
-                            <p>Choose your favourite place. No matter <br class="d-none d-sm-block"> where you
-                                travel inside the World.</p>
+                            <h5 class="text-secondary fw-bold fs-0">Layanan Premium</h5>
+                            <p>Kami mengutamakan pelayanan <br class="d-none d-sm-block">untuk anda</p>
                         </div>
                     </div>
                     <div class="d-flex align-items-start mb-5">
-                        <div class="bg-danger me-sm-4 me-3 p-3" style="border-radius: 13px"> <img
-                                src="assets/img/steps/water-sport.svg" width="22" alt="steps" /></div>
+                        <div class="bg-danger me-sm-4 me-3 p-3" style="border-radius: 13px"> <i
+                                class="bi bi-bicycle text-white"></i></div>
                         <div class="flex-1">
-                            <h5 class="text-secondary fw-bold fs-0">Make Payment</h5>
-                            <p>After find your perfect spot, make your <br class="d-none d-sm-block"> payment and
-                                get ready to travel.</p>
+                            <h5 class="text-secondary fw-bold fs-0">Layanan Antar Jemput</h5>
+                            <p>Lokasi anda jauh? <br class="d-none d-sm-block"> kami ambil dan antar ke rumah.</p>
                         </div>
                     </div>
                     <div class="d-flex align-items-start mb-5">
-                        <div class="bg-info me-sm-4 me-3 p-3" style="border-radius: 13px"> <img
-                                src="assets/img/steps/taxi.svg" width="22" alt="steps" /></div>
+                        <div class="bg-success me-sm-4 me-3 p-3" style="border-radius: 13px">
+                            <i class="bi bi-chat-dots-fill text-white"></i>
+                        </div>
                         <div class="flex-1">
-                            <h5 class="text-secondary fw-bold fs-0">Reach Airport on Selected Date</h5>
-                            <p>Lastly, you have to arrive at the airport <br class="d-none d-sm-block"> on time and
-                                enjoy the vacation.</p>
+                            <h5 class="text-secondary fw-bold fs-0">Pemesanan Fleksibel</h5>
+                            <p>Pesan Via Whatsapp <br class="d-none d-sm-block"> atau aplikasi</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-start mb-5">
+                        <div class="bg-info me-sm-4 me-3 p-3" style="border-radius: 13px"> <i
+                                class="bi bi-credit-card-fill text-white"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h5 class="text-secondary fw-bold fs-0">Pembayaran Fleksibel</h5>
+                            <p>Bayar Langsung atau Online <br class="d-none d-sm-block"> all in one order </p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6 d-flex justify-content-center align-items-start">
                     <div class="card position-relative shadow" style="max-width: 370px;">
                         <div class="position-absolute z-index--1 me-10 me-xxl-0" style="right:-160px;top:-210px;">
-                            <img src="assets/img/steps/bg.png" style="max-width:550px;" alt="shape" />
+                            <img src="{{ asset('user/assets/img/steps/bg.png') }}" style="max-width:550px;"
+                                alt="shape" />
                         </div>
                         <div class="card-body p-3"> <img class="mb-4 mt-2 rounded-2 w-100"
-                                src="assets/img/steps/booking-img.jpg" alt="booking" />
-                            <div>
+                                src="{{ asset('asset/produk-section-3.jpg') }}" height="350px" alt="booking" />
+                            {{-- <div>
                                 <h5 class="fw-medium">Trip To Greece</h5>
                                 <p class="fs--1 mb-3 fw-medium">14-29 June | by Robbin joseph</p>
                                 <div class="icon-group mb-4"> <span class="btn icon-item"> <img
-                                            src="assets/img/steps/leaf.svg" alt="" /></span><span
-                                        class="btn icon-item"> <img src="assets/img/steps/map.svg"
+                                            src="{{ asset('user/assets/img/steps/leaf.svg') }}"
                                             alt="" /></span><span class="btn icon-item"> <img
-                                            src="assets/img/steps/send.svg" alt="" /></span>
+                                            src="{{ asset('user/assets/img/steps/map.svg') }}"
+                                            alt="" /></span><span class="btn icon-item"> <img
+                                            src="{{ asset('user/assets/img/steps/send.svg') }}" alt="" /></span>
                                 </div>
                                 <div class="d-flex align-items-center justify-content-between">
                                     <div class="d-flex align-items-center mt-n1"><img class="me-3"
-                                            src="assets/img/steps/building.svg" width="18" alt="building" /><span
-                                            class="fs--1 fw-medium">24 people going</span>
+                                            src="{{ asset('user/assets/img/steps/building.svg') }}" width="18"
+                                            alt="building" /><span class="fs--1 fw-medium">24 people going</span>
                                     </div>
                                     <div class="show-onhover position-relative">
                                         <div class="card hideEl shadow position-absolute end-0 start-xl-50 bottom-100 translate-xl-middle-x ms-3"
@@ -232,8 +244,8 @@
                                             <div class="card-body py-3">
                                                 <div class="d-flex">
                                                     <div style="margin-right: 10px"> <img class="rounded-circle"
-                                                            src="assets/img/steps/favorite-placeholder.png" width="50"
-                                                            alt="favorite" /></div>
+                                                            src="{{ asset('user/assets/img/steps/favorite-placeholder.png') }}"
+                                                            width="50" alt="favorite" /></div>
                                                     <div>
                                                         <p class="fs--1 mb-1 fw-medium">Ongoing </p>
                                                         <h5 class="fw-medium mb-3">Trip to rome</h5>
@@ -248,11 +260,11 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <button class="btn"> <img src="assets/img/steps/heart.svg" width="20"
-                                                alt="step" /></button>
+                                        <button class="btn"> <img src="{{ asset('user/assets/img/steps/heart.svg') }}"
+                                                width="20" alt="step" /></button>
                                     </div>
                                 </div>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                 </div>
@@ -270,9 +282,8 @@
             <div class="row">
                 <div class="col-lg-5">
                     <div class="mb-8 text-start">
-                        <h5 class="text-secondary">Testimonials </h5>
-                        <h3 class="fs-xl-10 fs-lg-8 fs-7 fw-bold font-cursive text-capitalize">What people say
-                            about Us.</h3>
+                        <h5 class="text-secondary">Testimoni </h5>
+                        <h3 class="fs-xl-10 fs-lg-8 fs-7 fw-bold font-cursive text-capitalize">Apa kata mereka?</h3>
                     </div>
                 </div>
                 <div class="col-lg-1"></div>
@@ -292,14 +303,14 @@
                                 <div class="carousel-item position-relative active">
                                     <div class="card shadow" style="border-radius:10px;">
                                         <div class="position-absolute start-0 top-0 translate-middle"> <img
-                                                class="rounded-circle fit-cover" src="assets/img/testimonial/author.png"
+                                                class="rounded-circle fit-cover"
+                                                src="{{ asset('user/assets/img/testimonial/author.png') }}"
                                                 height="65" width="65" alt="" /></div>
                                         <div class="card-body p-4">
-                                            <p class="fw-medium mb-4">&quot;On the Windows talking painted pasture
-                                                yet its express parties use. Sure last upon he same as knew next. Of
-                                                believed or diverted no.&quot;</p>
-                                            <h5 class="text-secondary">Mike taylor</h5>
-                                            <p class="fw-medium fs--1 mb-0">Lahore, Pakistan</p>
+                                            <p class="fw-medium mb-4">&quot;Sangat membantu saya, saya jadi hemat waktu dan
+                                                bisa mengalokasikan waktu untuk kebutuhan yang lain&quot;</p>
+                                            <h5 class="text-secondary">Kusuma Wirdana</h5>
+                                            <p class="fw-medium fs--1 mb-0">Jakarta, Indonesia</p>
                                         </div>
                                     </div>
                                     <div class="card shadow-sm position-absolute top-0 z-index--1 mb-3 w-100 h-100"
@@ -308,14 +319,14 @@
                                 <div class="carousel-item position-relative ">
                                     <div class="card shadow" style="border-radius:10px;">
                                         <div class="position-absolute start-0 top-0 translate-middle"> <img
-                                                class="rounded-circle fit-cover" src="assets/img/testimonial/author2.png"
+                                                class="rounded-circle fit-cover"
+                                                src="{{ asset('user/assets/img/testimonial/author2.png') }}"
                                                 height="65" width="65" alt="" /></div>
                                         <div class="card-body p-4">
-                                            <p class="fw-medium mb-4">&quot;Jadoo is recognized as one of the
-                                                finest travel agency in the world. When it came to planning a trip,
-                                                I found them to be dependable.&quot;</p>
-                                            <h5 class="text-secondary">Thomas Wagon</h5>
-                                            <p class="fw-medium fs--1 mb-0">CEO of Red Button</p>
+                                            <p class="fw-medium mb-4">&quot;Hidup menjadi menyenangkan, layanan mudah
+                                                sekali tap untuk segalanya.&quot;</p>
+                                            <h5 class="text-secondary">Dwi Wijayakusuma</h5>
+                                            <p class="fw-medium fs--1 mb-0">Tanggerang, Indonesia</p>
                                         </div>
                                     </div>
                                     <div class="card shadow-sm position-absolute top-0 z-index--1 mb-3 w-100 h-100"
@@ -324,14 +335,14 @@
                                 <div class="carousel-item position-relative ">
                                     <div class="card shadow" style="border-radius:10px;">
                                         <div class="position-absolute start-0 top-0 translate-middle"> <img
-                                                class="rounded-circle fit-cover" src="assets/img/testimonial/author3.png"
+                                                class="rounded-circle fit-cover"
+                                                src="{{ asset('user/assets/img/testimonial/author3.png') }}"
                                                 height="65" width="65" alt="" /></div>
                                         <div class="card-body p-4">
-                                            <p class="fw-medium mb-4">&quot;On the Windows talking painted pasture
-                                                yet its express parties use. Sure last upon he same as knew next. Of
-                                                believed or diverted no.&quot;</p>
-                                            <h5 class="text-secondary">Kelly Willium</h5>
-                                            <p class="fw-medium fs--1 mb-0">Khulna, Bangladesh</p>
+                                            <p class="fw-medium mb-4">&quot;Saya merasa terbantu dan senang sekali
+                                                menikmati hidup, cuci serasa mudah.&quot;</p>
+                                            <h5 class="text-secondary">Kely</h5>
+                                            <p class="fw-medium fs--1 mb-0">Jakarta, Indonesia</p>
                                         </div>
                                     </div>
                                     <div class="card shadow-sm position-absolute top-0 z-index--1 mb-3 w-100 h-100"
@@ -342,10 +353,12 @@
                                 style="height:60px;width:20px;">
                                 <button class="carousel-control-prev position-static" type="button"
                                     data-bs-target="#testimonialIndicator" data-bs-slide="prev"><img
-                                        src="assets/img/icons/up.svg" width="16" alt="icon" /></button>
+                                        src="{{ asset('user/assets/img/icons/up.svg') }}" width="16"
+                                        alt="icon" /></button>
                                 <button class="carousel-control-next position-static" type="button"
                                     data-bs-target="#testimonialIndicator" data-bs-slide="next"><img
-                                        src="assets/img/icons/down.svg" width="16" alt="icon" /></button>
+                                        src="{{ asset('user/assets/img/icons/down.svg') }}" width="16"
+                                        alt="icon" /></button>
                             </div>
                         </div>
                     </div>
@@ -356,45 +369,45 @@
     </section>
     <!-- <section> close ============================-->
     <!-- ============================================-->
-    <div class="position-relative pt-9 pt-lg-8 pb-6 pb-lg-8">
+    {{-- <div class="position-relative pt-9 pt-lg-8 pb-6 pb-lg-8">
         <div class="container">
             <div class="row row-cols-lg-5 row-cols-md-3 row-cols-2 flex-center">
                 <div class="col">
                     <div class="card shadow-hover mb-4" style="border-radius:10px;">
-                        <div class="card-body text-center"> <img class="img-fluid" src="assets/img/partner/1.png"
-                                alt="" /></div>
+                        <div class="card-body text-center"> <img class="img-fluid"
+                                src="{{ asset('user/assets/img/partner/1.png') }}" alt="" /></div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="card shadow-hover mb-4" style="border-radius:10px;">
-                        <div class="card-body text-center"> <img class="img-fluid" src="assets/img/partner/2.png"
-                                alt="" /></div>
+                        <div class="card-body text-center"> <img class="img-fluid"
+                                src="{{ asset('user/assets/img/partner/2.png') }}" alt="" /></div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="card shadow-hover mb-4" style="border-radius:10px;">
-                        <div class="card-body text-center"> <img class="img-fluid" src="assets/img/partner/3.png"
-                                alt="" /></div>
+                        <div class="card-body text-center"> <img class="img-fluid"
+                                src="{{ asset('user/assets/img/partner/3.png') }}" alt="" /></div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="card shadow-hover mb-4" style="border-radius:10px;">
-                        <div class="card-body text-center"> <img class="img-fluid" src="assets/img/partner/4.png"
-                                alt="" /></div>
+                        <div class="card-body text-center"> <img class="img-fluid"
+                                src="{{ asset('user/assets/img/partner/4.png') }}" alt="" /></div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="card shadow-hover mb-4" style="border-radius:10px;">
-                        <div class="card-body text-center"> <img class="img-fluid" src="assets/img/partner/5.png"
-                                alt="" /></div>
+                        <div class="card-body text-center"> <img class="img-fluid"
+                                src="{{ asset('user/assets/img/partner/5.png') }}" alt="" /></div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!-- ============================================-->
     <!-- <section> begin ============================-->
-    <section class="pt-6">
+    {{-- <section class="pt-6">
 
         <div class="container">
             <div class="py-8 px-5 position-relative text-center"
@@ -426,7 +439,7 @@
             </div>
         </div><!-- end of .container-->
 
-    </section>
+    </section> --}}
     <!-- <section> close ============================-->
     <!-- ============================================-->
     <!-- ============================================-->
@@ -436,41 +449,30 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-7 col-12 mb-4 mb-md-6 mb-lg-0 order-0"> <img class="mb-4"
-                        src="assets/img/logo2.svg" width="150" alt="jadoo" />
-                    <p class="fs--1 text-secondary mb-0 fw-medium">Book your trip in minute, get full Control for
-                        much longer.</p>
+                        src="https://technosolution.site/wp-content/uploads/2023/04/ADR-Techno-Solution.png"
+                        width="100" alt="company logo" />
+                    <p class="fs--1 text-secondary mb-0 fw-medium">PT ADR Technosolution</p>
                 </div>
-                <div class="col-lg-2 col-md-4 mb-4 mb-lg-0 order-lg-1 order-md-2">
-                    <h4 class="footer-heading-color fw-bold font-sans-serif mb-3 mb-lg-4">Company</h4>
+                <div class="col-lg-3 col-md-4 mb-4 mb-lg-0 order-lg-1 order-md-2">
+                    <h4 class="footer-heading-color fw-bold font-sans-serif mb-3 mb-lg-4">Perusahaan</h4>
                     <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><a class="link-900 fs-1 fw-medium text-decoration-none" href="#!">Syarat
+                                & Ketentuan</a></li>
                         <li class="mb-2"><a class="link-900 fs-1 fw-medium text-decoration-none"
-                                href="#!">About</a></li>
+                                href="#!">Karir</a></li>
                         <li class="mb-2"><a class="link-900 fs-1 fw-medium text-decoration-none"
-                                href="#!">Careers</a></li>
-                        <li class="mb-2"><a class="link-900 fs-1 fw-medium text-decoration-none"
-                                href="#!">Mobile</a></li>
+                                href="#!">Privasi</a></li>
                     </ul>
                 </div>
-                <div class="col-lg-2 col-md-4 mb-4 mb-lg-0 order-lg-2 order-md-3">
-                    <h4 class="footer-heading-color fw-bold font-sans-serif mb-3 mb-lg-4">Contact</h4>
+                <div class="col-lg-3 col-md-4 mb-4 mb-lg-0 order-lg-2 order-md-3">
+                    <h4 class="footer-heading-color fw-bold font-sans-serif mb-3 mb-lg-4">Kontak</h4>
                     <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><a class="link-900 fs-1 fw-medium text-decoration-none" href="#!">Pusat
+                                Pengaduan</a></li>
                         <li class="mb-2"><a class="link-900 fs-1 fw-medium text-decoration-none"
-                                href="#!">Help/FAQ</a></li>
+                                href="#!">Facebook</a></li>
                         <li class="mb-2"><a class="link-900 fs-1 fw-medium text-decoration-none"
-                                href="#!">Press</a></li>
-                        <li class="mb-2"><a class="link-900 fs-1 fw-medium text-decoration-none"
-                                href="#!">Affiliate</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-2 col-md-4 mb-4 mb-lg-0 order-lg-3 order-md-4">
-                    <h4 class="footer-heading-color fw-bold font-sans-serif mb-3 mb-lg-4">More</h4>
-                    <ul class="list-unstyled mb-0">
-                        <li class="mb-2"><a class="link-900 fs-1 fw-medium text-decoration-none"
-                                href="#!">Airlinefees</a></li>
-                        <li class="mb-2"><a class="link-900 fs-1 fw-medium text-decoration-none"
-                                href="#!">Airline</a></li>
-                        <li class="mb-2"><a class="link-900 fs-1 fw-medium text-decoration-none" href="#!">Low
-                                fare tips</a></li>
+                                href="#!">Tiktok</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-5 col-12 mb-4 mb-md-6 mb-lg-0 order-lg-4 order-md-1">
@@ -479,10 +481,11 @@
                             class="text-decoration-none icon-item shadow-social" id="instagram" href="#!"><i
                                 class="fab fa-instagram"> </i></a><a class="text-decoration-none icon-item shadow-social"
                             id="twitter" href="#!"><i class="fab fa-twitter"> </i></a></div>
-                    <h4 class="fw-medium font-sans-serif text-secondary mb-3">Discover our app</h4>
+                    <h4 class="fw-medium font-sans-serif text-secondary mb-3">Coba Aplikasi Kami</h4>
                     <div class="d-flex align-items-center"> <a href="#!"> <img class="me-2"
-                                src="assets/img/play-store.png" alt="play store" /></a><a href="#!"> <img
-                                src="assets/img/apple-store.png" alt="apple store" /></a></div>
+                                src="{{ asset('user/assets/img/play-store.png') }}" alt="play store" /></a><a
+                            href="#!"> <img src="{{ asset('user/assets/img/apple-store.png') }}"
+                                alt="apple store" /></a></div>
                 </div>
             </div>
         </div><!-- end of .container-->
@@ -491,6 +494,6 @@
     <!-- <section> close ============================-->
     <!-- ============================================-->
     <div class="py-5 text-center">
-        <p class="mb-0 text-secondary fs--1 fw-medium">All rights reserved@jadoo.co </p>
+        <p class="mb-0 text-secondary fs--1 fw-medium">All rights reserved </p>
     </div>
 @endsection
