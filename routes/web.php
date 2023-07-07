@@ -35,6 +35,9 @@ Route::middleware('auth')->group(function () {
 Route::prefix('admin')->middleware(['auth', 'verified', 'isadmin'])->group(function () {
     Route::get('/', [AdminController::class, 'index'])->name('admin.index');
 });
+// Route::get('/admindash', [AdminController::class, 'index'])->name('admin.index');
+
+
 
 //route web landing page
 
