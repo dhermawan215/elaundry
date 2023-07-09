@@ -9,15 +9,15 @@
                             <ul class="nav nav-tabs" role="tablist">
                                 <li class="nav-item">
                                     <a class="nav-link active ps-0" id="home-tab" data-bs-toggle="tab" href="#overview"
-                                        role="tab" aria-controls="overview" aria-selected="true">Overview</a>
+                                        role="tab" aria-controls="overview" aria-selected="true">Data Customer</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#audiences"
-                                        role="tab" aria-selected="false">Audiences</a>
+                                        role="tab" aria-selected="false">Pricelist</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" id="contact-tab" data-bs-toggle="tab" href="#demographics"
-                                        role="tab" aria-selected="false">Demographics</a>
+                                        role="tab" aria-selected="false">Progress</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link border-0" id="more-tab" data-bs-toggle="tab" href="#more"
@@ -35,7 +35,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="tab-content tab-content-basic">
+                        {{-- <div class="tab-content tab-content-basic">
                             <div class="tab-pane fade show active" id="overview" role="tabpanel"
                                 aria-labelledby="overview">
                                 <div class="row">
@@ -852,7 +852,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>
