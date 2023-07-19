@@ -13,7 +13,6 @@
 
                                 <div class="row">
                                     <div class="col-lg-12 d-flex flex-column">
-
                                         <div class="row flex-grow">
                                             <div class="col-12 grid-margin stretch-card">
                                                 <div class="card card-rounded">
@@ -49,13 +48,9 @@
                                                 </div>
                                             </div>
                                         </div>
-
                                     </div>
-
-
-
-
                                 </div>
+
                             </div>
                         </div>
                     </div>
@@ -99,6 +94,46 @@
                 </div>
             </div>
         </div>
+
+        <!-- End Modal Add Master Item -->
+        <!-- Modal Edit Master Item -->
+        <div class="modal fade" id="masterItemEdit" tabindex="-1" aria-labelledby="masterItemEdit" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Formulir Edit Master Item Data: <span id="itemName"
+                                class="text-primary"></span></h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="javascript:;" method="POST" id="masterItemFormEdit">
+                            <input type="hidden" name="id" id="idData">
+                            @csrf
+                            @method('PATCH')
+                            <div class="form-group">
+                                <label for="nama">Nama Item</label>
+                                <input type="text" class="form-control" name="nama" id="namaItem">
+                            </div>
+                            <div class="form-group">
+                                <label for="keterangan">Keterangan Item</label>
+                                <input type="text" class="form-control" name="keterangan" id="keteranganItem">
+                            </div>
+                            <div class="form-group">
+                                <label for="harga">Harga Item</label>
+                                <input type="number" class="form-control" name="harga" id="hargaItem">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Update</button>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger text-white" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Modal Edit Master Item -->
 
 
     </div>

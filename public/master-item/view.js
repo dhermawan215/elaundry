@@ -53,7 +53,13 @@ var Index = (function () {
     };
 
     var handleShowInModal = function (param) {
-        console.log(param);
+        // console.log(parseFloat(param.harga));
+        $("#idData").val(param.index);
+        $("#namaItem").val(param.nama);
+        $("#keteranganItem").val(param.keterangan);
+        $("#hargaItem").val(parseFloat(param.harga));
+
+        $("#itemName").html(param.nama);
     };
 
     //function add data master item
@@ -85,10 +91,87 @@ var Index = (function () {
         });
     };
 
+    var handleUpdateData = function () {
+        $("#masterItemFormEdit").submit(function (e) {
+            e.preventDefault();
+
+            const form = $(this);
+            let formData = new FormData(form[0]);
+
+            const id = $("#idData").val();
+
+            $.ajax({
+                type: "POST",
+                url: url + "/admin/master-item/" + id,
+                data: formData,
+                processData: false,
+                contentType: false,
+                success: function (response) {
+                    toastr.success("Data Berhasil Di Perbarui", "Success");
+                    setTimeout(function () {
+                        location.reload();
+                    }, 5000);
+                },
+                error: function (response) {
+                    $.each(response.responseJSON, function (key, value) {
+                        toastr.error(value);
+                    });
+                },
+            });
+        });
+    };
+
+    var handleDeleteData = function () {
+        $(document).on("click", ".btndel", function () {
+            let id = $(this).data("id");
+
+            Swal.fire({
+                title: "Anda Yakin?",
+                text: "Data yang terhapus tidak dapat dikembalikan!",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "#d33",
+                confirmButtonText: "Yes, delete it!",
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    $.ajax({
+                        type: "DELETE",
+                        url: url + "/admin/master-item/" + id,
+                        data: {
+                            _token: csrf_token,
+                            // ids: id,
+                        },
+                        success: function (response) {
+                            Swal.fire(
+                                "Deleted!",
+                                "Your file has been deleted.",
+                                "success"
+                            );
+                            table.ajax.reload();
+                        },
+                        error: function (response) {
+                            Swal.fire({
+                                icon: "error",
+                                title: "Oops...",
+                                text: "Internal Server Error",
+                            });
+                        },
+                    });
+                    //
+
+                    //
+                }
+            });
+        });
+    };
+
     return {
         init: function () {
             handleMasterItem();
             handleAddData();
+            handleUpdateData();
+            handleDeleteData();
         },
     };
 })();

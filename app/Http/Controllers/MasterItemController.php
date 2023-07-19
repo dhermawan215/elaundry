@@ -48,10 +48,14 @@ class MasterItemController extends Controller
         } else {
             foreach ($resData as $key => $value) {
                 $data['rnum'] = $i;
+                $data['index'] = \base64_encode($value->id);
                 $data['nama'] = $value->nama;
                 $data['keterangan'] = $value->keterangan;
-                $data['harga'] = $value->harga ? \number_format($value->harga) : \number_format(0);
-                $data['action'] = "";
+                $data['harga'] = $value->harga;
+                $data['action'] = '<div class="d-flex"><button type="button" class="btn btn-sm btn-primary btn-edit-data text-white"
+                    data-toggle="modal" data-target="#masterItemEdit" title="edit"><i class="mdi mdi-pencil"></i></button>
+                    <button id="btnDelete" class="btn btn-sm btn-danger btndel text-white" title="delete" data-id="' . \base64_encode($value->id) . '"><i class="mdi mdi-do-not-disturb"></i></button>
+                </div>';
 
                 $arr[] = $data;
                 $i++;
@@ -101,5 +105,57 @@ class MasterItemController extends Controller
         } else {
             return \response()->json(["success" => \false], 500);
         }
+    }
+
+    public function update(Request $request, $id)
+    {
+        $requestAll = $request->all();
+        $id2 = \base64_decode($id);
+        //validasi request masuk
+        $validator = Validator::make(
+            $request->all(),
+            [
+                'nama' => ['required', 'string', 'max:100'],
+                'keterangan' => ['required', 'string', 'max:255'],
+                'harga' => ['required', 'numeric'],
+
+            ]
+        );
+
+        if ($validator->fails()) {
+            return \response()->json($validator->errors()->all(), 403);
+        }
+
+        //unset token csrf
+        unset($requestAll['_token']);
+        unset($requestAll['_method']);
+
+        //cari data untuk diupdate
+
+        $masterItem = MasterItemModel::find($id2);
+
+        $update = $masterItem->update($requestAll);
+
+        if (!$update) {
+            return \response()->json(["success" => \false], 500);
+        }
+
+        return \response()->json(["success" => \true], 200);
+    }
+
+    public function destroy($id)
+    {
+
+        $id2 = \base64_decode($id);
+
+        $masterItem = MasterItemModel::find($id2);
+
+        $delete = $masterItem->delete();
+
+        if (!$delete) {
+            return \response()->json(["success" => \false], 500);
+        }
+
+        return \response()->json(["success" => \true], 200);
     }
 }
