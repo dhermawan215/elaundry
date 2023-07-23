@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MasterItemController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TrackingController;
+use App\Http\Controllers\TransaksiController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -43,7 +44,7 @@ Route::prefix('admin')->middleware(['auth', 'verified', 'isadmin'])->group(funct
     Route::post('/master-items', [MasterItemController::class, 'masterItemData']);
     Route::post('/master-item', [MasterItemController::class, 'store']);
 });
-// Route::get('/admindash', [AdminController::class, 'index'])->name('admin.index');
+Route::get('/transaksi', [TransaksiController::class, 'index'])->name('admin.transaksi');
 
 
 

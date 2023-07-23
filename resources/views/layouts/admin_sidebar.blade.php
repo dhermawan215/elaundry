@@ -198,7 +198,7 @@
             </a>
         </li>
         <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{{ route('admin.transaksi') }}" class="nav-link">
                 <i class="menu-icon mdi mdi-floor-plan"></i>
                 <span class="menu-title">Transaction</span>
                 <i class="menu-arrow"></i>
