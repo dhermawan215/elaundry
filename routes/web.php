@@ -43,6 +43,8 @@ Route::prefix('admin')->middleware(['auth', 'verified', 'isadmin'])->group(funct
     Route::get('/master-item', [MasterItemController::class, 'index'])->name('admin.master_item');
     Route::post('/master-items', [MasterItemController::class, 'masterItemData']);
     Route::post('/master-item', [MasterItemController::class, 'store']);
+    Route::patch('/master-item/{item}', [MasterItemController::class, 'update']);
+    Route::delete('/master-item/{item}', [MasterItemController::class, 'destroy']);
 });
 Route::get('/transaksi', [TransaksiController::class, 'index'])->name('admin.transaksi');
 
