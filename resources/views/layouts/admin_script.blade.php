@@ -34,4 +34,8 @@
     var url = "{{ url('') }}";
 </script>
 
+<script type="text/javascript"></script>
+
+
+
 <!-- End custom js for this page-->

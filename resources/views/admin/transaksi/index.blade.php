@@ -36,6 +36,7 @@
                                                                         <th>No Transaksi</th>
                                                                         <th>Nama Pelanggan</th>
                                                                         <th>Tanggal</th>
+                                                                        <th>Qty</th>
                                                                         <th>Total Bayar</th>
                                                                         <th>Bayar</th>
                                                                         <th>Kembalian</th>
@@ -81,7 +82,8 @@
                             @csrf
                             <div class="form-group">
                                 <label for="no_transaksi">No Transaksi</label>
-                                <input type="text" class="form-control" name="no_transaksi" id="no_transaksi">
+                                <input type="text" class="form-control" name="no_transaksi" id="no_transaksi"
+                                    value="{{ $transactionNumber }}" disabled>
                             </div>
                             <div class="form-group">
                                 <label for="nama_pelanggan">Nama Pelanggan</label>
@@ -92,16 +94,23 @@
                                 <input type="date" class="form-control" name="tanggal" id="tanggal">
                             </div>
                             <div class="form-group">
+                                <label for="qty">Qty</label>
+                                <input type="number" class="form-control" name="qty" id="qty">
+                            </div>
+                            <div class="form-group">
                                 <label for="total_bayar">Total Bayar</label>
-                                <input type="number" class="form-control" name="total_bayar" id="total_bayar">
+                                <input type="number" class="form-control" name="total_bayar" id="total_bayar"
+                                    value="{{ $totalBayar }}" disabled>
                             </div>
                             <div class="form-group">
                                 <label for="bayar">Bayar</label>
-                                <input type="number" class="form-control" name="bayar" id="bayar">
+                                <input type="number" class="form-control" name="bayar" id="bayar"
+                                    value="{{ $bayar }}">
                             </div>
                             <div class="form-group">
                                 <label for="kembalian">Kembalian</label>
-                                <input type="number" class="form-control" name="kembalian" id="kembalian">
+                                <input type="number" class="form-control" name="kembalian" id="kembalian"
+                                    value="{{ $kembalian }}" disabled>
                             </div>
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </form>
@@ -116,6 +125,17 @@
 
     </div>
 @endsection
+
+@push('custom_script')
+    <script>
+        function reloadPage() {
+            window.location.reload();
+        }
+        // mereload halaman selama 20 detik
+        setTimeout(reloadPage, 20000 * 3);
+    </script>
+@endpush
+
 @push('custom_script')
     <script src="{{ asset('master-item/view.min.js?q=') . time() }}"></script>
 @endpush
