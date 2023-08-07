@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('no_transaksi')->unique();
             $table->date('tanggal')->nullable();
+            $table->double('qty')->nullable();
             $table->string('nama_pelanggan')->nullable();
             $table->double('total_bayar')->nullable();
             $table->double('bayar')->nullable();
